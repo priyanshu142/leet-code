@@ -40,6 +40,11 @@ public:
         root = root->right;
         return root;
       }
+      else if(root->right==NULL){
+                TreeNode* temp=root;
+                root=root->left;
+                return root;
+            }
       else
       {
         TreeNode *temp = findMIN(root->right);
